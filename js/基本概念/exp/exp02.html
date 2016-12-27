@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+	var num1 = Number(prompt('请输入第一个数字'));
+	var y = prompt('请输入运算符');
+	var num2 = Number(prompt('请输入第二个数字'));
+
+	// switch(y){
+	// 	case '+':
+	// 		console.log(num1+num2);
+	// 		break;
+	// 	case '-':
+	// 		console.log(num1-num2);
+	// 		break;
+	// 	case '*':
+	// 		console.log(num1*num2);
+	// 		break;
+	// 	case '/':
+	// 		console.log(num1/num2);
+	// 		break;
+	// 	default:
+	// 		alert('请输入正确的运算符');
+	// }
+
+	if(y=='+'){
+		console.log(num1+num2);
+	}
+	if(y=='-'){
+		console.log(num1-num2);
+	}
+	if(y=='*'){
+		console.log(num1*num2);
+	}
+	if(y=='/'){
+		console.log(num1/num2);
+	}
+	if(y!='+'&&y!='-'&&y!='*'&&y!='/'){
+		alert('请输入正确的运算符');
+	}
+</script>
+</html>
