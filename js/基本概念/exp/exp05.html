@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		body{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+	// for(i=0;i<5;i++){
+	// 	for(j=i;j<5;j++){
+	// 		document.write('* ');
+	// 	}
+	// 	document.write('<br/>');
+	// }
+	// for(i=0;i<5;i++){
+	// 	for(j=0;j<i+1;j++){
+	// 		document.write('* ');
+	// 	}
+	// 	document.write('<br/>');
+	// }
+
+	for(i=0;i<10;i++){
+		if(i<10/2){
+			for(j=i;j<10/2;j++){
+				document.write('* ');
+			}
+		}else{
+			for(j=0;j<=i-10/2;j++){
+				document.write('* ');
+			}
+		}
+		document.write('<br/>');
+	}
+
+	// 需求：页面中输出99乘法表
+</script>
+</html>
