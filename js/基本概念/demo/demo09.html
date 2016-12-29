@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+	var str1 = '这是一个全局变量';
+
+	var str1 = '测试文字';
+
+	// for(i = 0;i<3;i++){
+
+	// }
+
+
+	function test(){
+		var str2 = '这是一个局部变量';
+		console.log(str2);
+	}
+
+	test();
+
+	function test2(){
+		var str2 = '这又是一个局部变量';
+		console.log(str2);
+	}
+
+	test2();
+
+	console.log(str1);
+</script>
+</html>
