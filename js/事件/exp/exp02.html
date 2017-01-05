@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+		}
+		#test{
+			width: 50px;
+			height: 50px;
+			background-color: red;
+			position: absolute;
+		}
+	</style>
+</head>
+<body>
+	<div id="test"></div>
+</body>
+<script type="text/javascript">
+	var direction = '右';
+	var obj = document.getElementById('test');
+	obj.style.left = '0px';
+	obj.style.top = '0px';
+	window.addEventListener('keydown',function(e){
+		switch(e.keyCode){
+			case 37:
+				console.log('左');
+				direction = '左';
+				break;
+			case 38:
+				console.log('上');
+				direction = '上';
+				break;
+			case 39:
+				console.log('右');
+				direction = '右';
+				break;
+			case 40:
+				console.log('下');
+				direction = '下';
+				break;
+		}
+	},false);
+	var setIn = setInterval(function(){
+		var x = obj.style.left;
+		var y = obj.style.top;
+		x = Number(x.substr(0,x.length-2));
+		y = Number(y.substr(0,y.length-2));
+		console.log();
+		// obj.style.left = (x + 10)+'px';
+		// obj.style.top = (y + 10)+'px';
+		switch(direction){
+			case '左':
+				obj.style.left = (x - 10)+'px';
+				break;
+			case '上':
+				obj.style.top = (y - 10)+'px';
+				break;
+			case '右':
+				obj.style.left = (x + 10)+'px';
+				break;
+			case '下':
+				obj.style.top = (y + 10)+'px';
+				break;
+		}
+	},500);
+</script>
+</html>

@@ -28,12 +28,9 @@
 	var obj = document.getElementById('test');
 	obj.style.top = '0px';
 	obj.style.left = '0px';
-	var winWidth = window.innerWidth;
-	var winHeight = window.innerHeight;
-	// setInterval(function(){
-	// 	window.onkeydown(39);
-	// },1000);
 	window.addEventListener('keydown',function(e){
+		var winWidth = window.innerWidth;
+		var winHeight = window.innerHeight;
 		var arr = getPosition();
 		console.log();
 		switch(e.keyCode){
