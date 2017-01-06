@@ -1,0 +1,101 @@
+DOM:
+	将整个页面映射为一个多层节点结构（DOM树）
+	可以借助DOM提供的API(接口)针对节点进行删除、添加、替换、修改
+
+	节点概念
+		1.元素节点
+		2.文本节点
+		3.属性节点
+
+	获取节点对象
+		1.getElementById();
+		2.getElementsByTagName();
+		3.getElementsByName();
+		4.getElementsByClassName();
+		5.querySelector();
+		6.querySelectorAll();
+
+	element.nodeName	返回元素的标记名（大写）
+	element.nodeType	返回元素的节点类型
+
+	DOM - HTML
+
+		innerHTML：向标签中插入一段代码或者文本会替换掉原本存在的元素或者文本
+		innerText：向标签中插入一段文本，会替换掉原本的文本
+
+		attributes:获取元素的属性组
+		getAttribute:获取元素的属性
+		setAttribute:元素的属性
+
+	当鼠标点击图像时，切换图片
+
+		element.childNodes:返回元素的一个子节点的数组
+		element.children:返回元素的元素子节点
+		element.parentNode	返回元素的父节点
+		element.textContent	设置或返回一个节点和它的文本内容
+		element.firstChild	返回元素的第一个子节点
+		element.lastChild	返回的最后一个子元素
+		element.nextSibling	返回该元素紧跟的一个节点
+		element.previousSibling	返回某个元素紧接之前元素
+
+		element.className	设置或返回元素的class属性
+		element.style	设置或返回元素的样式属性
+
+		element.removeChild()	删除一个子元素
+		element.replaceChild()	替换一个子元素
+		
+		element.hasChildNodes()	返回一个元素是否具有任何子元素
+		element.toString()	一个元素转换成字符串
+		element.appendChild()	为元素添加一个新的子元素
+		element.insertBefore()	现有的子元素之前插入一个新的子元素
+		element.cloneNode()	克隆某个元素
+		element.focus()	设置文档或元素获取焦点
+		element.hasfocus()	返回布尔值，检测文档或元素是否获取焦点
+		element.hasAttribute()	如果元素中存在指定的属性返回 true，否则返回false
+		element.removeAttribute()	从元素中删除指定的属性
+		element.hasAttributes()	如果元素有任何属性返回true，否则返回false。
+		element.isEqualNode()	检查两个元素是否相等
+
+
+	DOM事件
+		鼠标事件：
+			onclick	当用户点击某个对象时调用的事件句柄。
+			ondblclick	当用户双击某个对象时调用的事件句柄
+			onmousedown	鼠标按钮被按下。
+			onmouseup	鼠标按键被松开。
+			onmousemove	鼠标被移动。
+			onmouseover	鼠标移到某元素之上。
+			onmouseout	鼠标从某元素移开。
+		键盘事件
+			onkeydown	某个键盘按键被按下。	
+			onkeypress	某个键盘按键被按下并松开。	
+			onkeyup	某个键盘按键被松开。
+		对象事件：
+			onload	一张页面或一幅图像完成加载。
+			onscroll	当文档被滚动时发生的事件。
+		表单事件：
+			onblur	元素失去焦点时触发
+			onchange	该事件在表单元素的内容改变时触发( <input>, <keygen>, <select>, 和 <textarea>)
+			onfocus	元素获取焦点时触发
+			oninput	元素获取用户输入时触发
+			onreset	表单重置时触发
+			onselect	用户选取文本时触发 ( <input> 和 <textarea>)
+			onsubmit	表单提交时触发
+
+		以下内容为课外知识：
+
+			剪切事件：
+				oncopy	该事件在用户拷贝元素内容时触发
+				oncut	该事件在用户剪切元素内容时触发
+				onpaste	该事件在用户粘贴元素内容时触发
+			动画事件：
+				animationend	该事件在 CSS 动画结束播放时触发	 
+				animationiteration	该事件在 CSS 动画重复播放时触发	 
+				animationstart	该事件在 CSS 动画开始播放时触发
+			过渡事件
+				transitionend	该事件在 CSS 完成过渡后触发。
+
+
+
+
+

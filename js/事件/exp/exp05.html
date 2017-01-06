@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+	function getTime(){
+		var nowTime = new Date();
+		var Y = nowTime.getFullYear();
+		var M = nowTime.getMonth()+1;
+		var d = nowTime.getDate();
+		var z = nowTime.getDay();
+		var h = nowTime.getHours();
+		var m = nowTime.getMinutes();
+		var s = nowTime.getSeconds();
+		switch(z){
+			case 0:
+				z = '礼拜天';
+				break;
+			case 1:
+				z = '礼拜一';
+				break;
+			case 2:
+				z = '礼拜二';
+				break;
+			case 3:
+				z = '礼拜三';
+				break;
+			case 4:
+				z = '礼拜四';
+				break;
+			case 5:
+				z = '礼拜五';
+				break;
+			case 6:
+				z = '礼拜六';
+				break;
+
+		}
+		console.log(Y+'年'+M+'月'+d+'日'+h+':'+m+':'+s+z);
+	}
+	// getTime();
+	setInterval(getTime,1000);
+</script>
+</html>

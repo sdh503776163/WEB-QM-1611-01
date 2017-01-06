@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<button id="open">打开</button>
+	<button id="close">关闭</button>
+</body>
+<script type="text/javascript">
+	var obj = null;
+	var openBtn = document.getElementById('open');
+	openBtn.onclick = function(){
+		obj = window.open('','test','height=300,width=200');
+	}
+
+	var closeBtn = document.getElementById('close');
+	closeBtn.onclick = function(){
+		obj.close();
+	}
+</script>
+</html>
