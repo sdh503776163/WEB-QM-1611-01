@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<button id="addRow">添加一行</button>
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+	</ul>
+</body>
+<script type="text/javascript">
+	c();
+	var addRow = document.querySelector('#addRow');
+	var ul = document.querySelector('ul');
+	addRow.onclick = function(){
+		var newLi = document.createElement('li');
+		newLi.innerText = '6666';
+		ul.appendChild(newLi);
+		c();
+	}
+	
+	function c(){
+		var li = document.querySelectorAll('li');
+		for(i=0;i<li.length;i++){
+			if(i%2==0){
+				li[i].style.backgroundColor = 'red';
+			}else{
+				li[i].style.backgroundColor = 'blue';
+			}
+		}
+	}
+</script>
+</html>

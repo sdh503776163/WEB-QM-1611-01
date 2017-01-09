@@ -53,9 +53,9 @@ DOM:
 		element.hasfocus()	返回布尔值，检测文档或元素是否获取焦点
 		element.hasAttribute()	如果元素中存在指定的属性返回 true，否则返回false
 		element.removeAttribute()	从元素中删除指定的属性
-		element.hasAttributes()	如果元素有任何属性返回true，否则返回false。
 		element.isEqualNode()	检查两个元素是否相等
 
+		createElement()		创建新节点
 
 	DOM事件
 		鼠标事件：
@@ -94,8 +94,4 @@ DOM:
 				animationstart	该事件在 CSS 动画开始播放时触发
 			过渡事件
 				transitionend	该事件在 CSS 完成过渡后触发。
-
-
-
-
 

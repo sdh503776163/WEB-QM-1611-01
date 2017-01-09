@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		li{
+			margin:10px 0;
+		}
+	</style>
+</head>
+<body>
+	<button id="addRow">添加一行</button>
+	<ul>
+		<li><button>删除</button></li>
+		<li><button>删除</button></li>
+		<li><button>删除</button></li>
+	</ul>
+</body>
+<script type="text/javascript">
+	addEvent();
+	var addRow = document.querySelector('#addRow');
+	var ul = document.querySelector('ul');
+	addRow.onclick = function(){
+		createRow();
+	}
+	//新建行函数
+	function createRow(){
+		var newLi = document.createElement('li');
+		var newBtn = document.createElement('button');
+		newBtn.innerText = '删除';
+		newLi.appendChild(newBtn);
+		ul.appendChild(newLi);
+		newBtn.onclick = delRow;
+		// addEvent();
+	}
+
+	function delRow(){
+		ul.removeChild(this.parentNode);
+	}
+
+	function addEvent(){
+		var btnGroup = document.querySelector('ul').querySelectorAll('button');
+		for(i=0;i<btnGroup.length;i++){
+			btnGroup[i].onclick = delRow;
+		}
+	}
+</script>
+</html>
