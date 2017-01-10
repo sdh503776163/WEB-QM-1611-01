@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<form>
+		<input type="text" name="username">
+		<input type="password" name="pwd">
+		<input type="submit" name="send">
+	</form>
+</body>
+<script type="text/javascript">
+	var form = document.querySelector('form');
+	var username = form.username;
+	var pwd = form.pwd;
+	var flag = true;
+	bindEvent(username);
+	bindEvent(pwd);
+	
+	function bindEvent(obj){
+		obj.onblur = function(){
+			if(obj.value == ''){
+				obj.style.borderColor = 'red';
+				flag =  false;
+			}else{
+				obj.style.borderColor = 'green';
+				flag = true;
+			}
+		}
+	}
+
+	form.onsubmit = function(){
+		username.onblur();
+		pwd.onblur();
+		return flag;
+	}
+</script>
+</html>

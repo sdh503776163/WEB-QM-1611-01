@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<form>
+		<input type="text" name="username">
+		<br>
+		<br>
+		<select name="select">
+			<option>1990</option>
+			<option>1991</option>
+			<option>1992</option>
+		</select>
+		<input type="submit" name="send">
+	</form>
+</body>
+<script type="text/javascript">
+	var form = document.querySelector('form');
+	var username = form.username;
+	var select = form.select;
+	username.onfocus = function(){
+		console.log('光标现在处于用户名输入框中');
+	}
+	username.onblur = function(){
+		console.log('光标从用户名输入框中遗失');
+	}
+	username.oninput = function(){
+		console.log('666666');
+	}
+
+	select.onchange = function(){
+		console.log('下拉选项改变了');
+	}
+
+	form.onsubmit = function(){
+		return false;
+	}
+</script>
+</html>
