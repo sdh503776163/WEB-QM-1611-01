@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<select id="s">
+		<option>请选择省</option>
+	</select>
+	<select id="c">
+		<option>请选择市</option>
+	</select>
+	<select id="q">
+		<option>请选择区</option>
+	</select>
+	
+</body>
+<script type="text/javascript">
+	var g = {
+		'四川省':{
+			'成都市':['金牛区','武侯区','青羊区'],
+			'内江市':['东兴区','市中区'],
+			'绵阳市':['绵阳东','绵阳西']
+		},
+		'浙江省':{
+			'杭州市':['杭州1','杭州2','杭州3'],
+			'嘉兴市':['嘉兴1','嘉兴2'],
+			'温州市':['温州1','温州2']
+		},
+		'江苏省':{
+			'南京市':['南京1','南京2','南京3'],
+			'苏州市':['苏州1','苏州2'],
+			'常州市':['常州1','常州2']
+		}
+	}
+
+	// console.log(g);
+	var s = document.querySelector('#s');
+	var c = document.querySelector('#c');
+	var q = document.querySelector('#q');
+	for(i in g){
+		s.add(new Option(i,i));
+	}
+	s.onchange = function(){
+		var sValue = this.value;
+		c.options.length = 1;
+		q.options.length = 1;
+		var obj = g[sValue];
+		for(j in obj){
+			c.add(new Option(j,j));
+		}
+	}
+	c.onchange = function(){
+		var sValue = s.value;
+		var cValue = this.value;
+		q.options.length = 1;
+		var arr = g[sValue][cValue];
+		for(k in arr){
+			q.add(new Option(arr[k],arr[k]));
+		}
+	}
+
+
+</script>
+</html>
