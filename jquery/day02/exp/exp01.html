@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<button id="addRow">添加一行</button>
+	<ul>
+		<li><button>删除</button></li>
+		<li><button>删除</button></li>
+		<li><button>删除</button></li>
+	</ul>
+</body>
+<script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+	bindEvent();
+	$('#addRow').click(function(){
+		var obj = $('<li><button>删除</button></li>');
+		$('ul').append(obj);
+		// bindEvent();
+
+		// var obj = $('<li><button>删除</button></li>').appendTo('ul');
+		obj.children('button').click(function(){
+			$(this).parent().remove();
+		});
+	});
+
+	// $('li > button').click(function(){
+	// 	$(this).parent().remove();
+	// });
+
+	function bindEvent(){
+		$('li').delegate('button','click',function(){
+			$(this).parent().remove();
+		});
+	}
+	
+</script>
+</html>

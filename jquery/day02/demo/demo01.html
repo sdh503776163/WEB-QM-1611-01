@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<button>测试按钮</button>
+	<p>123123</p>
+</body>
+<script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+	// $('button').click(function(){
+	// 	//这是第一种事件绑定
+	// });
+
+	// $('button').click(function(){
+	// 	console.log(23333);
+	// }).mouseover(function(){
+	// 	console.log(66666);
+	// });
+
+	// $("button").bind("click mouseover", function(){
+	// 	console.log(66666);
+	// });
+
+	// $("button").unbind( "click" );
+	// $("button").unbind();
+
+	// $("button").on("click mouseover", function(){
+	// 	console.log(66666);
+	// });
+
+	// $("button").off();
+
+	// $("button").one("click", function(){
+	// 	console.log(66666);
+	// });
+
+	// $("button").trigger("click");
+
+	// $("body").delegate("button","click",function(){
+	// 	console.log(66666);
+	// }).delegate("p","click",function(){
+	// 	console.log(2333);
+	// });
+
+	// $("body").undelegate('p',"click" )
+
+	// $("button").mouseover(function(){
+	// 	console.log(66666);
+	// }).mouseout(function(){
+	// 	console.log(233333);
+	// });
+
+	$("button").hover(
+		function(){
+			console.log(6666666);
+		},
+		function(){
+			console.log(2333333);
+		}
+	);
+</script>
+</html>
