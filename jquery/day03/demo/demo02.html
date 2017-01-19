@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		.div1{
+			width: 500px;
+			height: 500px;
+			background-color: red;
+			position: absolute;
+		}
+	</style>
+</head>
+<body>
+	<button id="stat">开始</button>
+	<button id="stop">停止</button>
+	<div class="div1"></div>
+</body>
+<script type="text/javascript" src='../js/jquery-3.1.1.min.js'></script>
+<script type="text/javascript">
+	// console.log($('.div1').innerWidth());
+	$('#stat').click(function(){
+		// $('.div1').css('display','none');
+		// $('.div1').hide(5000,function(){
+		// 	console.log('动画执行完毕');
+		// });
+		// $('.div1').show();
+
+		// $('.div1').fadeToggle(3000,'linear',function(){
+		// 	console.log('动画执行完毕');
+		// });
+
+		// $('.div1').animate({
+		// 	'width':'0px',
+		// 	'height':'0px',
+		// 	'opacity':'0'
+		// },3000);
+
+		// $('.div1').animate({
+		// 	'left':'200px',
+		// },3000,function(){
+		// 	$(this).animate({'left':'0px'},3000);
+		// });
+
+		// $('.div1').delay(5000).animate({'left':'300px'},3000);
+		$('.div1').animate({'left':'500px'},5000);
+	});
+	$('#stop').click(function(){
+		// $('.div1').stop(true,true);
+		$('.div1').finish();
+	});
+</script>
+</html>

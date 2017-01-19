@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style>
+  div { margin:3px; width:40px; height:40px;
+        position:absolute; left:0px; top:30px; 
+        background:green; display:none; }
+  div.newcolor { background:blue; }
+  span { color:red; }
+</style>
+</head>
+<body>
+	<!-- <ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+	</ul> -->
+	<button id="show">Show Length of Queue</button>
+	<span></span>
+	<div></div>
+</body>
+<script type="text/javascript" src='../js/jquery-3.1.1.min.js'></script>
+<script type="text/javascript">
+	// console.log($('li:eq(0)'));
+
+	// console.log($('li').eq(0));
+
+	// console.log($('li')[0]);
+	// console.log($('li').get(0));
+
+	// console.log($('li').eq(1).index());
+
+	$("#show").click(function () {
+      var n = $("div").queue("fx");
+      $("span").text("Queue length is: " + n.length);
+});
+function runIt() {
+      $("div").show("slow");
+      $("div").animate({left:'+=200'},2000);
+      $("div").slideToggle(1000);
+      $("div").slideToggle("fast");
+      $("div").animate({left:'-=200'},1500);
+      $("div").hide("slow");
+      $("div").show(1200);
+      $("div").slideUp("normal", runIt);
+}
+runIt();
+
+</script>
+</html>
