@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<input type="text">
+</body>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/md5.js"></script>
+<script type="text/javascript">
+	var sendData = {
+		    q:'你好',
+		    from:'zh',
+		    to:'en',
+		    appid:'20170105000035330',
+		    salt:'1435660288',
+		    sign:''
+		};
+	var my = 'r7FwVoXnnNfT5VJIwcbb';
+	
+
+	$('input')[0].oninput = function(){
+		sendData.q = $(this).val();
+		var str = sendData.appid+sendData.q+sendData.salt+my; 
+		sendData.sign = MD5(str);
+
+		$.ajax({
+	        url:"http://api.fanyi.baidu.com/api/trans/vip/translate",
+	        data:sendData,
+	        type:'get',
+	        dataType: 'jsonp',
+	        success:function(data){
+	            console.log(data['trans_result'][0]['dst']);
+	        }
+	    });
+	    console.log(666);
+
+	    /*
+			0
+			1
+			2
+			3
+			
+
+			3
+			2
+			1
+			0
+
+
+
+	    */
+	};
+</script>
+</html>
