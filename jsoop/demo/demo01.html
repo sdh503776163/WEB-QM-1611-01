@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+	//早期开发人员常用的创建对象的模式
+	// var obj = new Object();
+	// obj.name = '张三';
+	// obj.getName = function(){
+	// 	alert(this.name);
+	// }
+
+	// console.log(obj);
+	// obj.getName();
+
+	//现在推荐使用的字面量创建对象的模式
+	// var obj = {
+	// 	name:'张三',
+	// 	getName:function(){
+	// 		alert(this.name);
+	// 	}
+	// }
+
+	// console.log(test);
+
+	//工厂模式
+	// function createObj(name){
+	// 	var o = new Object();
+	// 	o.name = name;
+	// 	o.getName = function(){
+	// 		alert(this.name);
+	// 	};
+	// 	return o;
+	// }
+
+	// var obj = createObj('张三');
+	// console.log(obj);
+	// var obj2 = createObj('里斯');
+	// console.log(obj2);
+
+	//构造函数模式
+	// function Obj(name){
+	// 	this.name = name;
+	// 	this.sayName = function(){
+	// 		alert(this.name);
+	// 	}
+	// }
+	// var obj = new Obj('张三');
+	// console.log(obj);
+
+	// var str = '';
+
+	// console.log(str instanceof Object);
+
+	//原型模式
+	// function newObj(){
+
+	// }
+
+	// newObj.prototype.name = '测试';
+	// newObj.prototype.sayName = function(){
+	// 	alert(this.name);
+	// };
+	// var obj = new newObj();
+	// console.log(obj.sayName());
+	// prototype
+
+	
+</script>
+</html>

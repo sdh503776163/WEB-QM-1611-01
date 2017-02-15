@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+	// var obj1 = {
+	// 	name:'张三',
+	// 	fn1:function(){
+	// 		console.log(1111);
+	// 	}
+	// }
+	// var obj2 = obj1;
+	// // console.log(obj1);
+	// // console.log(obj2);
+
+	// obj1.name = '测试';
+	// console.log(obj1);
+	// console.log(obj2);
+
+	function SuperType(){
+		this.property = true;
+	}
+	SuperType.prototype.getSuperValue = function(){
+		return this.property;
+	}
+
+	function SubType(){
+		this.subproperty = false;
+	}
+
+	//SubType继承SuperType
+	// SubType.prototype = new SuperType();
+	var obj = new SuperType();
+	SubType.prototype = obj;
+
+	SubType.prototype.getSubValue = function(){
+		return this.subproperty;
+	}
+
+	// SuperType.prototype.property = 'false';
+	obj.property = 'false';
+
+	var instance = new SubType();
+	console.log(instance);
+	alert(instance.getSuperValue());
+
+	/*
+	SubType继承了SuperType的属性和方法
+	所以在最后能通过SubType的实例化对象去获取继承过来的方法和属性
+	*/
+</script>
+</html>
